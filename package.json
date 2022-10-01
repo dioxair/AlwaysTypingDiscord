@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "you will forever be typing in a discord channel :D",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
