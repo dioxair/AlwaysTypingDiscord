@@ -8,3 +8,11 @@ const auth = await inquirer.prompt({
     type: "input",
     message: ">> "
 });
+
+console.log("This program needs the channel ID of the channel you want the program to run in\n")
+
+const channelToType = await inquirer.prompt({
+    name: "channelID",
+    type: "input",
+    message: ">> "
+});
