@@ -29,7 +29,7 @@ const options = {
 async function AlwaysTypingLoop() {
     while (true) {
         axios.request(options).then(function (response) {
-            console.log(`API request succeeded! - Status code: ${response.status}`);
+            console.log(`API request succeeded! - Status code: ${response.status} - UTC Time: ${new Date().toUTCString()}`);
         }).catch(function (error) {
             console.error(error);
             console.error("API request failed!");
