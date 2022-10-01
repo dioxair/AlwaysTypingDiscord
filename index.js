@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import axios from "axios";
+const sleep = ms => new Promise(res => setTimeout(res, ms))
 
 console.log("This program needs your Discord token to work.\n");
 
@@ -25,9 +26,16 @@ const options = {
     }
 };
 
-axios.request(options).then(function (response) {
-    console.log(`API request succeeded! - Status code: ${response.status}`);
-}).catch(function (error) {
-    console.error(error);
-    console.error("API request failed!");
-});
+async function AlwaysTypingLoop() {
+    while (true) {
+        axios.request(options).then(function (response) {
+            console.log(`API request succeeded! - Status code: ${response.status}`);
+        }).catch(function (error) {
+            console.error(error);
+            console.error("API request failed!");
+        });
+        await sleep(3000);
+    }
+}
+
+AlwaysTypingLoop();
