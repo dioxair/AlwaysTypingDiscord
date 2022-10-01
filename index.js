@@ -24,3 +24,10 @@ const options = {
         authorization: `${auth.discordToken}`
     }
 };
+
+axios.request(options).then(function (response) {
+    console.log(`API request succeeded! - Status code: ${response.status}`);
+}).catch(function (error) {
+    console.error(error);
+    console.error("API request failed!");
+});
