@@ -16,3 +16,11 @@ const channelToType = await inquirer.prompt({
     type: "input",
     message: ">> "
 });
+
+const options = {
+    method: "POST",
+    url: `https://discord.com/api/v9/channels/${channelToType.channelID}/typing`,
+    headers: {
+        authorization: `${auth.discordToken}`
+    }
+};
