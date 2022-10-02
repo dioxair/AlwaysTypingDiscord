@@ -4,7 +4,7 @@ Small prank in Node.js that makes it appear as if you're typing in a Discord cha
 
 ![alwaystypingdiscord](https://user-images.githubusercontent.com/94651716/193422363-ec2ed833-ecf5-49dd-b105-72f3aab5226a.png)
 
-# Building the project
+# Building the project (Linux)
 
 ## Requirements:
 
@@ -23,5 +23,3 @@ After that, install the project's dependencies with `npm`
 ```console
 npm i
 ```
-
-# Binaries for Linux and Windows soon!
